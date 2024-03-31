@@ -5,59 +5,85 @@
     <title>Weather</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-amber-300 via-orange-500 to-red-500 ">
+<body class="min-h-screen bg-gradient-to-t from-amber-300 via-orange-400 to-red-500 pb-8">
 
     <div class="flex justify-center items-center mt-3">
-    <img src="./static/icons/unknown.png" alt="Weather image with question mark in the middle">
+    <img src="./assets/img/unknown.png" alt="Weather image with question mark in the middle">
     </div>
 
     <div class="flex justify-center">
-        <form method="POST">
-        {{ form.hidden_tag() }}
-        {{ form.csrf_token }}
+        <!-- {{ form.hidden_tag() }}
+        {{ form.csrf_token }} -->
 
         <div class="form-group">
-<div >
-            {{ form.city(class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", id="city", placeholder="City") }}
-     </div>
+            <div >
+                <!-- {{ form.city(class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", id="city", placeholder="City") }} -->
+                <form  id="city" >
+                    <label>
+                        <input class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="city" placeholder="City" value="London">
+                    </label></form>
+            </div>
             <br>
+            <div class="text-center">
+                <p class="mb-2">This is an example</p>
+                <p class="mb-2">page for my project at</p>
+                <a href="https://github.com/enesscakmak/weather-app" class="text-indigo-800 hover:underline container">
+                    <div class="flex mr-7">
+                    <img class="max-h-6 max-w-10" src="assets/img/github-logo.png" alt="Github Logo" >
+                    <h1 class="ml-1">GitHub Page of the project</h1>
+                </div>
+                </a>
+                <br>
+            </div>
             <div class="pt-3 flex justify-center">
-                        {{ form.submit(class="shadow bg-purple-500 py-3 px-3 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold rounded", value="Get Weather")}}
+                <button class="shadow bg-purple-500 py-3 px-3 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold rounded">Get Weather</button>
+                  <!-- {{ form.submit(class="shadow bg-purple-500 py-3 px-3 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold rounded", value="Get Weather")}} -->
             </div>
                 <br>
         </div>
-            </form>
-</div>
-        <div class="container mx-auto min-w-80 min-h-80 bg-[#21212120] rounded-lg ">
+    </div>
+        <div class="container mx-auto min-w-80 min-h-80 bg-[#21212120] rounded-lg scale-x-95">
             <div class="text-[#000000100] flex flex-wrap justify-between">
                 <div class="mr-0">
                     <ul>
-                        <li class="text-8xl ml-20 mt-6">{{ current_temperature }}</li>
+                        <li class="text-8xl ml-20 mt-6">12.3°C</li>
+                        <li class="text-4xl ml-20 mt-6"> London, GB</li>
+                        <li class="text-3xl ml-20 mt-6">Minimum 9.5°C</li>
+                        <li class="text-3xl ml-20 mt-6 mb-6">Maximum 16.1°C</li>
+                        <!-- <li class="text-8xl ml-20 mt-6">{{ current_temperature }}</li>
                         <li class="text-4xl ml-20 mt-6"> {{ name }}, {{ country }}</li>
                         <li class="text-3xl ml-20 mt-6">Minimum {{ min_temp }}</li>
-                        <li class="text-3xl ml-20 mt-6 mb-6">Maximum {{ max_temp }}</li>
+                        <li class="text-3xl ml-20 mt-6 mb-6">Maximum {{ max_temp }}</li> -->
                     </ul>
                 </div>
                 <div class="mr-0">
                     <ul>
-                        <li class="text-3xl ml-16 mt-10">Feels Like {{ feels_like }}</li>
+                        <li class="text-3xl ml-16 mt-10">Feels Like 11.7°C</li>
+                        <li class="text-3xl ml-16 mt-8">Humidity is at 79%</li>
+                        <li class="text-3xl ml-16 mt-8">Wind speed is 5.14 m/s</li>
+                        <li class="text-3xl ml-16 mt-8 mb-10">Pressure is 992 hPa</li>
+                        <!-- <li class="text-3xl ml-16 mt-10">Feels Like {{ feels_like }}</li>
                         <li class="text-3xl ml-16 mt-8">Humidity is at {{ humidity }}</li>
                         <li class="text-3xl ml-16 mt-8">Wind speed is {{ wind }}</li>
-                        <li class="text-3xl ml-16 mt-8 mb-10">Pressure is {{ pressure }}</li>
+                        <li class="text-3xl ml-16 mt-8 mb-10">Pressure is {{ pressure }}</li> -->
                     </ul>
                 </div>
                 <div class="mr-0">
                     <ul>
-                        <li class="text-3xl ml-16 mt-12">Expecting {{ description }}</li>
+                        <li class="text-3xl ml-16 mt-12">Expecting Overcast Clouds</li>
+                        <li class="text-3xl ml-16 mt-12 mb-12">Sunrise at 05:37</li>
+                        <li class="text-3xl ml-16 mb-12">Sunset at 18:31</li>
+                        <!-- <li class="text-3xl ml-16 mt-12">Expecting {{ description }}</li>
                         <li class="text-3xl ml-16 mt-12 mb-12">Sunrise at {{ sunrise }}</li>
-                        <li class="text-3xl ml-16 mb-12">Sunset at {{ sunset }}</li>
+                        <li class="text-3xl ml-16 mb-12">Sunset at {{ sunset }}</li> -->
                     </ul>
                 </div>
                 <div>
                     <ul>
                         <li>
                             <!-- Weather Icons from https://github.com/yuvraaaj/openweathermap-api-icons -->
-                            <img class="mr-16 my-20" src="./static/icons/{{ icon }}.png" alt="Weather Icon">
+                            <img class="mr-16 my-20" src="./assets/img/04d.png" alt="Weather Icon">
+                            <!-- <img class="mr-16 my-20" src="./static/icons/{{ icon }}.png" alt="Weather Icon"> -->
                         </li>
                     </ul>
                 </div>
