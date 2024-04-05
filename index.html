@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enes Çakmak</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes slideDown {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Image Button -->
+
+    <div class="fixed bottom-4 left-4 z-50">
+        <button id="menuToggle" class="block md:hidden flex items-center">
+            <img src="./assets/img/enes_foto.png" alt="A photo of me" class="rounded-full h-12 w-12 mr-2">
+            <span class="text-base font-semibold">Enes ÇAKMAK</span>
+        </button>
+    </div>
+
+
+    <!-- Large Screen Menu -->
+    <nav id="menu" class="bg-white text-gray-800 h-screen fixed bottom-0 left-0 z-10 overflow-y-auto w-full md:w-48 lg:w-64 hidden md:block" style="animation: slideDown 0.5s ease;">
+        <div class="flex justify-between items-center h-20 px-4 hidden md:flex">
+            <img src="./assets/img/enes_foto.png" alt="A photo of me" class="rounded-full h-12 w-12">
+            <span class="text-base font-semibold md:mr-0 lg:mr-16">Enes ÇAKMAK</span>
+        </div>
+        <ul class="mt-4">
+            <li class="mb-4">
+                <a href="#about" class="block px-4 py-2 rounded-md  hover:bg-gray-200 hover:text-white">About</a>
+            </li>
+            <li class="mb-4">
+                <a href="#projects" class="block px-4 py-2 rounded-md hover:bg-gray-200">Projects</a>
+            </li>
+            <li class="mb-4">
+                <a href="#contact" class="block px-4 py-2 rounded-md hover:bg-gray-200">Contact</a>
+            </li>
+            <hr class="mx-auto ml-4 mr-4">
+            <li class="mb-4">
+                <a href="https://enescakmak.com/weather/templates/" class="block px-4 py-2 rounded-md hover:bg-gray-200">Weather Site</a>
+            </li>
+            <li class="mb-4">
+                <a href="https://github.com/enesscakmak/to-do" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">To-Do</a>
+            </li>
+            <li class="mb-4">
+                <a href="https://github.com/enesscakmak/cv-builder" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">CV Builder</a>
+            </li>
+            <li class="mb-4">
+                <a href="https://github.com/enesscakmak/reminder-tkinter" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">Reminder</a>
+            </li>
+            <hr class="mx-auto ml-4 mr-4">
+            <li class="mb-4">
+                <a href="https://github.com/enesscakmak" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">GitHub</a>
+            </li>
+            <li class="mb-4">
+                <a href="https://www.linkedin.com/in/enesscakmak/" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">LinkedIn</a>
+            </li>
+            <li class="mb-4">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cakmakkeness@gmail.com" target="_blank" class="block px-4 py-2 rounded-md hover:bg-gray-200">E-Mail</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="flex">
+        <main class="ml-8 mr-8 md:ml-56 lg:ml-72 py-8">
+
+            <!-- About Me Section -->
+            <section id="about" class="mb-8">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4 text-center">About Me</h2>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est
+                            ligula.
+                            Maecenas vitae diam sit amet lectus fermentum vulputate.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+<section id="projects" class="mb-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Add your projects here -->
+        <a href="https://enescakmak.com/weather/templates" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Weather Site</h3>
+            <p>A website made with Flask and Tailwind CSS to see the current weather status with Open Weather Map API.</p>
+        </a>
+        <a href="https://github.com/enesscakmak/to-do" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">To-Do App and Site</h3>
+            <p>To-Do app made with Python Tkinter and site made using Flask, SQL and Bootstrap.</p>
+        </a>
+        <a href="https://github.com/enesscakmak/cv-builder" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">CV Builder</h3>
+            <p>CV Builder made with Java that places the information you provide into templates you choose or create yourself.</p>
+        </a>
+        <a href="https://github.com/enesscakmak/reminder-tkinter" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Reminder</h3>
+            <p>Reminder app made with Python Tkinter to remind whatever you want at the date you want with notification or e-mail.</p>
+        </a>
+        <a href="https://github.com/enesscakmak/pongGame" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Pong Game</h3>
+            <p>Arcade Pong Game made with Python Turtle library.</p>
+        </a>
+        <a href="https://github.com/enesscakmak/enescakmak.github.io" target="_blank" class="bg-white rounded-lg shadow p-6 block hover:bg-gray-200 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Personal Site</h3>
+            <p>This personal site that I made with Tailwind, HTML and JavaScript.</p>
+        </a>
+    </div>
+</section>
+
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Contact</h2>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <p class="text-lg">Email:
+                            <a href="mailto:aşdsif @gmail.com">aşdsif @gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    const topMenu = document.getElementById('topMenu');
+
+    menuToggle.addEventListener('click', () => {
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.style.animation = 'slideDown 0.5s ease';
+        } else {
+            menu.style.animation = 'slideUp 0.5s ease';
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 500);
+        }
+        topMenu.classList.toggle('hidden');
+    });
+
+    // Get all menu items
+    const menuItems = document.querySelectorAll('#menu a');
+
+    // Add click event listener to each menu item
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Close the menu
+            menu.style.animation = 'slideUp 0.5s ease';
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 500);
+            topMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+
+</body>
+
+</html>
