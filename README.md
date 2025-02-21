@@ -1,7 +1,7 @@
 # Portfolio Website  
 ### Portfolio website to showcase my various information and projects.  
 
-You can find the website at(temporarily on github pages): https://enesscakmak.github.io/enescakmak.github.io 
+You can find the website at: https://enescakmak.net 
 
 ## Navigation  
 You can navigate through website from here to either parts in page or to projects. 
