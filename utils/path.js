@@ -1,5 +1,5 @@
 export function getBasePath() {
-  return process.env.NODE_ENV === 'production' ? '/enescakmak.github.io' : ''
+  return ''
 }
 
 export function withBasePath(path) {

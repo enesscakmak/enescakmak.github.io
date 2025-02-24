@@ -22,8 +22,8 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   output: 'export',
-  assetPrefix: '/enescakmak.github.io/',
-  basePath: '/enescakmak.github.io',
+  assetPrefix: '/',
+  basePath: '',
   trailingSlash: true,
 }
 

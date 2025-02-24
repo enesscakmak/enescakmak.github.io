@@ -12,7 +12,7 @@ export default function ProjectsPage() {
       title: "Weather Page",
       description: "A website made with Flask and Tailwind CSS to see the current weather status with Open Weather Map API.",
       tech: ["HTML", "Python", "Tailwind CSS", "Flask"],
-      image: "/enescakmak.github.io/weather.png",
+      image: "/weather.png",
       github: "https://github.com/enesscakmak/weather-app",
       demo: "https://enesscakmak.github.io/enescakmak.github.io/weather/templates/",
     },
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       title: "Movie Recommendation App",
       description: "Movie Recommendation App using Collaborative Filtering and cosine similarity for recommending movies that suits the user's taste by getting ratings from user.",
       tech: ["Java", "Python", "CSS", "Pandas"],
-      image: "/enescakmak.github.io/movie-recommendation-app.png",
+      image: "/movie-recommendation-app.png",
       github: "https://github.com/enesscakmak/movie-recommendation-java",
     },
     {
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       title: "Multiplayer Bomberman Variation Game",
       description: "Multiplayer game based on Bomberman. Made with Unity and PUN2.",
       tech: ["C#", "Unity"],
-      image: "/enescakmak.github.io/bomberman.png",
+      image: "/bomberman.png",
       github: "https://github.com/enesscakmak/online-bomberman-variation",
     },
     {
