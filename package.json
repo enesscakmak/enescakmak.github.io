@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp public/.nojekyll out/",
+    "build": "next build && cp public/.nojekyll out/ && cp _headers out/ && cp _redirects out/ && cp _routes.json out/",
     "start": "next start",
     "lint": "next lint"
   },
