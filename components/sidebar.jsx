@@ -10,10 +10,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { withBasePath } from "@/utils/path"
 
 const navigation = [
-  { name: "Projects", href: withBasePath("/projects") },
-  { name: "About", href: withBasePath("/about") },
-  { name: "Contact", href: withBasePath("/contact") },
-  { name: "CV", href: withBasePath("/cv") },
+  { name: "Projects", href: "/projects" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+  { name: "CV", href: "/cv" },
 ]
 
 const socialLinks = [
@@ -97,7 +97,7 @@ export function Sidebar() {
           <div className="flex h-full flex-col justify-between p-6">
             <nav className="space-y-6">
               <Link
-                href={withBasePath("/")}
+                href="/"
                 className="block text-lg font-medium tracking-tight hover:text-zinc-900 dark:hover:text-zinc-100"
               >
                 enes çakmak
@@ -144,7 +144,7 @@ export function Sidebar() {
         <div className="flex h-full w-[240px] flex-col justify-between border-r border-zinc-200 bg-white/80 p-6 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/80">
           <nav className="space-y-6">
             <Link
-              href={withBasePath("/")}
+              href="/"
               className="block text-lg font-medium tracking-tight hover:text-zinc-900 dark:hover:text-zinc-100"
             >
               enes çakmak

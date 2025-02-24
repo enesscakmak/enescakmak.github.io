@@ -3,4 +3,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: origin-when-cross-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; worker-src 'self' blob:; connect-src 'self';
-*/ 
+*/
