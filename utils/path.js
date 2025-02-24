@@ -3,6 +3,6 @@ export function getBasePath() {
 }
 
 export function withBasePath(path) {
-  const basePath = getBasePath()
-  return path.startsWith('/') ? `${basePath}${path}` : `${basePath}/${path}`
+  // Just return the path as-is - no base path needed for Cloudflare Pages
+  return path;
 } 
