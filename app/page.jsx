@@ -254,7 +254,7 @@ function FeaturedProject() {
         </div>
         <div className="aspect-video overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-800">
           <Image
-            src="/enescakmak.github.io/weather.png"
+            src="/weather.png"
             alt="Weather app preview"
             width={1920}
             height={1080}

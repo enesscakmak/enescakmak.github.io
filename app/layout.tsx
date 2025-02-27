@@ -3,9 +3,8 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Enes Çakmak',
+  description: 'Portfolio of Enes Çakmak',
 }
 
 export default function RootLayout({
