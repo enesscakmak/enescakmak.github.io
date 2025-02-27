@@ -7,20 +7,6 @@ import { Card } from "@/components/ui/card"
 import { Sidebar } from "@/components/sidebar"
 import { withBasePath } from "@/utils/path"
 
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/enesscakmak",
-    icon: () => <ExternalLink />,
-  },
-  
-  {
-    name: "LinkedIn",
-    href: "https://linkedin.com/in/enesscakmak",
-    icon: () => <ExternalLink />,
-  },
-]
-
 export default function Home() {
   return (
     <div className="flex min-h-screen bg-zinc-50 dark:bg-zinc-900">
@@ -325,4 +311,18 @@ function ProjectCard({ title, description, tags, link }) {
     </Card>
   )
 }
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    href: "https://github.com/enesscakmak",
+    icon: () => <ExternalLink />,
+  },
+  
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/enesscakmak",
+    icon: () => <ExternalLink />,
+  },
+]
 

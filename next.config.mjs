@@ -1,3 +1,6 @@
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
+
+
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -7,6 +10,7 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -15,39 +19,22 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  output: 'export',
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; worker-src 'self' blob:; connect-src 'self';"
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
-        ]
-      }
-    ];
-  }
+}
+
+if (process.env.NODE_ENV === 'development') {
+  await setupDevPlatform();
 }
 
 mergeConfig(nextConfig, userConfig)
