@@ -11,12 +11,6 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -28,9 +22,13 @@ const nextConfig = {
   },
   experimental: {
     webpackBuildWorker: true,
-    parallelServerCompiles: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 }
 
 if (process.env.NODE_ENV === 'development') {
