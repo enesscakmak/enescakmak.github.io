@@ -1,0 +1,6 @@
+[build]
+command = "pnpm run build"
+output_dir = "out"
+
+[build.environment]
+NODE_VERSION = "18" 
